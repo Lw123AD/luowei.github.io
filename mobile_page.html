@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 关键：适配手机屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>手机端图文页面</title>
+    <style>
+        /* 全局样式：消除边距，让背景占满屏幕 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 背景图片容器：全屏显示，图片自适应 */
+        .bg-container {
+            width: 100vw;  /* 占满手机宽度 */
+            height: 100vh; /* 占满手机高度 */
+            background-image: url('D:\Python\sg_py\weather_alert\6e6966cc5cd48567898abd4e64e5dd9e.jpg'); /* 背景图片路径 */
+            background-size: cover; /* 图片覆盖容器 */
+            background-position: center; /* 图片居中 */
+            display: flex; /* 文字垂直居中 */
+            align-items: center; /* 文字垂直居中 */
+            justify-content: center; /* 文字水平居中 */
+            padding: 20px; /* 左右留边，避免文字贴边 */
+        }
+        /* 文字样式：清晰、美观 */
+        .text-content {
+            font-size: 20px; /* 手机端合适字号 */
+            color: #ffffff; /* 白色文字（适配深色背景，可改 #000000 为黑色） */
+            text-align: center; /* 文字居中 */
+            line-height: 1.8; /* 行高，提升可读性 */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* 文字阴影，增强辨识度 */
+            max-width: 600px; /* 限制文字最大宽度，避免宽屏变形 */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="text-content">这是一张图片背景<br><br>这里是你想展示的文字<br>可以换行、调整样式<br>手机端打开会自动适配屏幕</div>
+    </div>
+</body>
+</html>
+    
