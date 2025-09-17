@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>迪士尼烟花之约</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bg-container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('6e6966cc5cd48567898abd4e64e5dd9e.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            /* 增加背景虚化效果，突出文字 */
+            backdrop-filter: brightness(0.7);
+        }
+        .text-content {
+            /* 文字大小随屏幕自适应 */
+            font-size: clamp(22px, 6vw, 32px);
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.8;
+            max-width: 80%;
+            /* 烟花渐变色彩 */
+            background: linear-gradient(
+                135deg,
+                #ffeb3b,
+                #ff5722,
+                #e91e63,
+                #9c27b0
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            /* 增强发光效果 */
+            text-shadow:
+                0 0 10px rgba(255,255,255,0.8),
+                0 0 20px rgba(255,153,0,0.6),
+                0 0 30px rgba(255,69,0,0.4);
+            /* 增加边框装饰 */
+            padding: 20px;
+            border-radius: 15px;
+            /* 半透明背景增强可读性 */
+            background-color: rgba(0,0,0,0.2);
+            /* 动画效果 */
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        /* 文字闪烁动画 */
+        @keyframes glow {
+            from {
+                text-shadow:
+                    0 0 10px rgba(255,255,255,0.8),
+                    0 0 20px rgba(255,153,0,0.6);
+            }
+            to {
+                text-shadow:
+                    0 0 15px rgba(255,255,255,1),
+                    0 0 30px rgba(255,69,0,0.8),
+                    0 0 40px rgba(156,39,176,0.6);
+            }
+        }
+
+        /* 增加轻微的入场动画 */
+        .bg-container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="text-content">迪士尼烟花绚烂，<br><br>可否一起去赴这场<br>梦幻之约～</div>
+    </div>
+</body>
+</html>
